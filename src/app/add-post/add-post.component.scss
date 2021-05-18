@@ -1,9 +1,7 @@
 h2 {
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 4vh;
 }
-
-
 
 form {
   width: 80vw;
@@ -16,7 +14,7 @@ form {
 
   input,
   textarea {
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
   }
 
   label {
@@ -25,6 +23,7 @@ form {
 
   .btn {
     margin-left: 65vw;
+    margin-bottom: 5vh;
     padding: 10px 20px;
   }
 }
