@@ -1,13 +1,26 @@
+
 <h2>Add a new post</h2>
-<form>
+<form (ngSubmit)="onAddItem(postForm)" #postForm="ngForm">
     <div class="form-group">
-        <label for="postsTitle">Title</label>
-        <input name="title" type="text" class="form-control" id="postsTitle" placeholder="Enter title of post">
-    </div>
+        <label for="title">Post title:</label>
+        <input
+            name="title" 
+            type="text" 
+            class="form-control" 
+            id="title" 
+            placeholder="Enter title of post"
+            ngModel
+            />
+        </div>
     <div class="form-group">
-        <label for="postsText">Description</label>
-        <textarea id="postsText" class="form-control" placeholder="Enter your text...">
-        </textarea>
+        <label for="postText">Text:</label>
+        <textarea
+            id="description" 
+            type="postText" 
+            class="form-control"
+            name="postText" 
+            placeholder="Enter your text..."
+            ngModel></textarea>
     </div>
-    <button type="button" class="btn btn-success">Add</button>
+    <button type="submit" class="btn btn-info">Add</button>
 </form>

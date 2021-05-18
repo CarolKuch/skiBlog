@@ -1,6 +1,6 @@
 h2 {
   text-align: center;
-  margin: 10vh;
+  margin-top: 10vh;
 }
 
 .btn {
@@ -8,9 +8,20 @@ h2 {
 }
 
 form {
-  margin: 0 30vh;
+  width: 80vw;
+  margin: auto;
 
   textarea {
     min-height: 30vh;
+
+  }
+
+  input,
+  textarea {
+    margin-bottom: 5vh;
+  }
+
+  label {
+    margin: 2vh 0px;
   }
 }
