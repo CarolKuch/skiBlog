@@ -16,7 +16,11 @@ export class AddPostComponent implements OnInit {
   }
 
   onAddItem(form: NgForm) {
-    console.log(form.value);
+    axios
+      .post('http://localhost:3000/posts', {
+        "title": form.value.title, "text": form.value.postText
+      });
+    alert("Your post was added");
   }
 
 }

@@ -1,19 +1,19 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Trochę o lorem",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis, sem sit amet rhoncus ornare, turpis metus dignissim lorem, sed ultrices orci velit non odio. Praesent in viverra purus. Maecenas sit amet finibus arcu. Phasellus molestie tortor ut velit tempor, a dapibus massa fringilla. Quisque cursus non mi at ultrices. Nullam tristique nibh at ex hendrerit, in tristique augue commodo. Nullam aliquam rutrum tellus sit amet ullamcorper. Aliquam in nulla in arcu fringilla malesuada vel porta diam. Aliquam interdum velit sit amet mi porttitor, quis rhoncus enim rutrum. Mauris luctus fringilla nisi, quis eleifend sem lacinia nec. Sed vel dui quis lacus venenatis congue. Maecenas ut diam consequat, feugiat tellus a, iaculis tortor. Aliquam ac nisi vitae tortor bibendum consectetur. Curabitur facilisis bibendum tincidunt. Fusce eu finibus urna."
+      "title": "Freeride World Tour",
+      "text": "The Freeride World Tour is an annually toured series of events in which the best freeskiers and snowboard freeriders compete for individual event wins, as well as the overall title of World Champion in their respective genders and disciplines. The events take place on what's commonly referred to as backcountry, big mountain or extreme terrain - essentially ungroomed powder snow on dangerously steep, mountainous slopes. The first event series under the Freeride World Tour moniker took place in 2008. Prior to that it was known as the Verbier Extreme, originally a snowboard only contest launched in 1996 - with skiers also invited to compete in 2004. For the 2013 season, the Freeride World Tour merged with the Freeskiing World Tour and The North Face Masters of Snowboarding, combining all three tours under one unified global 5-star championship series.",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Numer z haba baba",
-      "text": "Morbi sed tincidunt est. Quisque auctor diam urna, nec maximus diam mattis eget. Integer fringilla velit sit amet molestie vulputate. Cras non convallis est. Nullam ligula nulla, feugiat non quam ac, dictum molestie enim. Vestibulum faucibus erat nibh, vel interdum urna porttitor ut. Etiam iaculis nunc ut tellus volutpat imperdiet. Curabitur finibus euismod scelerisque. Mauris pharetra congue lobortis. Sed facilisis rhoncus lacus, sit amet consectetur neque pulvinar ac. Vestibulum vitae est quis augue fermentum eleifend. Nam vehicula ligula ut ligula porta, quis ornare justo imperdiet. Sed eu quam dapibus, varius dui quis, dapibus enim. Fusce efficitur justo eget nulla condimentum, vitae hendrerit lectus lacinia. In hac habitasse platea dictumst. Aliquam quis nisi malesuada, condimentum purus vitae, sagittis erat."
+      "title": " Andrzej Bargiel was named National Geographic Adventurer of the Year.",
+      "text": "Andrzej Leszek Bargiel (Polish pronunciation: [ˈandʐɛj ˈlɛʂɛɡ ˈbarɡʲɛl]; born April 18, 1988 in Rabka, Poland) is a Polish ski mountaineer, backcountry skier, mountain runner and climber. Raised in Łętownia, he is a three-time Polish ski mountaineering champion and held third place in the overall World Cup. He is the current record holder in taking the least amount of time to achieve the Snow Leopard award. He is also the current record holder in the Elbrus Race. Since 2013, he has been running his original HIC SUNT LEONES (“here are lions” in Latin) project, the goal of which are speedy, oxygenless ascents and ski descents from the highest mountain peaks on Earth. He lives in Zakopane, Poland.",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Baba laba?",
-      "text": "Phasellus dictum dui felis, eu tempus velit consequat ac. Nulla vitae dapibus justo. Praesent luctus vulputate est, non maximus dolor pretium vitae. Maecenas condimentum, metus at convallis ultricies, erat orci convallis metus, nec elementum nunc ante vitae lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ullamcorper diam quis lobortis posuere. Curabitur eu tortor et nulla vehicula blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum id rutrum dui. Phasellus venenatis scelerisque sollicitudin. Pellentesque ac fringilla arcu, ac lacinia diam. Aliquam nisi massa, tincidunt et imperdiet ut, pharetra id mi. In hac habitasse platea dictumst. Fusce placerat rutrum nunc sed vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer felis elit, facilisis venenatis fringilla at, varius a sem."
+      "title": "Avalanche in Biały Jar",
+      "text": "There was an avalanche in the Karkonosze Mountains in Biały Jar. The rescue operation of the local GOPR is underway – polsatnews.pl has learned. 70 rescuers work on site. They don’t report if there are any deaths. It is unofficially known that several people were injured.      Polish rescuers work together with the Czech Horska Zachranna Służba. The information about the avalanche reached the services after 1",
+      "id": 3
     }
   ]
 }

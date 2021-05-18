@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.7" height="28.367" viewBox="0 0 30.7 28.367">
+  <g id="Group_139" data-name="Group 139" transform="translate(0.156 0.475)">
+    <g id="Group_138" data-name="Group 138" transform="translate(12.217 8.669)">
+      <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(0.283 0.469)" stroke="#0dcaf0" stroke-width="1">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="1" fill="none"/>
+      </g>
+    </g>
+    <line id="Line_1" data-name="Line 1" x1="20.927" y2="6.855" fill="none" stroke="#0dcaf0" stroke-width="1"/>
+    <path id="Path_43" data-name="Path 43" d="M481.561,660.392s-1.276,11.1,0,14.8c.027.078.055.152.123.317,3.419-.317,4.983-.317,4.983-.317" transform="translate(-470.472 -656.243)" fill="none" stroke="#0dcaf0" stroke-width="1"/>
+    <path id="Path_44" data-name="Path 44" d="M489.4,683.713c-2.233-.04-2.043,5.432-1.525,5.422s5.153-.638,5.272,0-1.106,3.2-.6,4.266,1.116.478,1.4,0,1.874-5.741.638-5.9a34.182,34.182,0,0,0-4.146,0S491.635,683.753,489.4,683.713Z" transform="translate(-475.621 -671.368)" stroke="#0dcaf0" stroke-width="1"/>
+    <path id="Path_45" data-name="Path 45" d="M476.364,709.535l.344,1.076s21.955-5.136,22.418-6.042.686-3.052.215-2.7-.295.873-1.079,1.87S476.364,709.535,476.364,709.535Z" transform="translate(-469.557 -683.31)" stroke="#0dcaf0" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,4 +1,22 @@
 .navbar-brand,
 .nav-item {
   margin: 10px;
+  color: #0dcaf0;
+}
+
+.navbar-brand:hover {
+  color: #0edcfe;
+
+  img {
+    filter: brightness(110%);
+  }
+}
+
+img {
+  width: 70px;
+  margin: 5px;
+
+  &:hover {
+    filter: brightness(110%);
+  }
 }
