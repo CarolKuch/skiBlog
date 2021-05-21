@@ -14,6 +14,8 @@ export class PostComponent implements OnInit {
   }
 
   confirmPostRemoval = () => {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
     return true;
   }
 
@@ -38,5 +40,4 @@ export class PostComponent implements OnInit {
   editPost = () => {
     this.router.navigate(['/edit/' + this.element.id]);
   }
-
 }

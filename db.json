@@ -14,11 +14,6 @@
       "title": "Avalanche in Biały Jar",
       "text": "There was an avalanche in the Karkonosze Mountains in Biały Jar. The rescue operation of the local GOPR is underway – polsatnews.pl has learned. 70 rescuers work on site. They don’t report if there are any deaths. It is unofficially known that several people were injured.      Polish rescuers work together with the Czech Horska Zachranna Służba. The information about the avalanche reached the services after 1. Biały Jar is located in the central part of the Karkonosze Mountains and is the place where the snow stays the longest in this mountain range. In winter, due to the danger of avalanches, tourists should not be on the trails that lead through this valley.",
       "id": 3
-    },
-    {
-      "title": "       axios({         method: 'DELETE',         url: 'http://localhost:3000/posts/' + (this.element",
-      "text": "asd\n      axios({\n        method: 'DELETE',\n        url: 'http://localhost:3000/posts/' + (this.element.id),\n        headers: { 'Content-Type': 'application/json' },\n      });\n      console.log(this.element.id);\n      alert(\"Post is removed\");\n\n      if (this.router.url === '/posts') {\n        window.location.reload()\n      } else {\n        this.router.navigate(['/posts']);\n      }",
-      "id": 4
     }
   ]
 }
