@@ -7,9 +7,17 @@ footer {
   bottom: 0;
   width: 100%;
   height: 3rem;
+  animation: post-load 800ms ease-in;
 
   a {
     color: #0fc7ec;
     text-decoration: none;
   }
+}
+
+@keyframes footer-load {
+  0% {
+    transform: translateY(+100%);
+  }
+
 }

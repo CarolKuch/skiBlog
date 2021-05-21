@@ -1,5 +1,7 @@
 .post {
   margin: 10vh;
+  animation: post-load 300ms ease-in;
+  padding: 1rem;
 }
 
 hr {
@@ -8,4 +10,17 @@ hr {
 
 img {
   width: 16px;
+}
+
+.button-container {
+  float: right;
+
+  button {
+    font-size: small;
+    margin: 2px;
+  }
+}
+
+p {
+  margin-bottom: 2rem;
 }

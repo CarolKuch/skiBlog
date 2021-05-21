@@ -10,7 +10,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-import { CheckoutSummaryComponent } from './order/checkout-summary/checkout-summary.component';
+import { CheckoutSummaryComponent } from './checkout-summary/checkout-summary.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CheckoutSummaryComponent } from './order/checkout-summary/checkout-summ
     NavigationComponent,
     AddPostComponent,
     FooterComponent,
-    CheckoutSummaryComponent
+    CheckoutSummaryComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

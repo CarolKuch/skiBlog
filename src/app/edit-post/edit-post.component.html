@@ -1,10 +1,10 @@
 
 <h2>
     <img src="../../assets/snowflake.svg" alt="snowflake">
-    Add a new post
+    Edit post {{postId}}
     <img src="../../assets/snowflake.svg" alt="snowflake">
 </h2>
-<form (ngSubmit)="onAddItem(postForm)" #postForm="ngForm">
+<form (ngSubmit)="onEditItem(postForm)" #postForm="ngForm">
     <div class="form-group">
         <label for="title">Post title:</label>
         <input
@@ -12,9 +12,8 @@
             type="text" 
             class="form-control" 
             id="title" 
-            placeholder="Enter title of post"
             maxlength="100"
-            ngModel
+            ngModel = {{postTitle}}
             />
         </div>
     <div class="form-group">
@@ -24,8 +23,11 @@
             type="postText" 
             class="form-control"
             name="postText" 
-            placeholder="Enter your text..."
-            ngModel></textarea>
+            ngModel = {{postText}}
+            ></textarea>
     </div>
-    <button type="submit" class="btn btn-info">ADD</button>
+    <div class="buttonsContainer">
+        <button type="submit" class="btn btn-info">CONFIRM</button>
+        <button type="submit" class="btn btn-danger">CANCEL</button>
+    </div>
 </form>
