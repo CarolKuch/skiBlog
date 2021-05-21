@@ -1,5 +1,9 @@
 
-<h2>Add a new post</h2>
+<h2>
+    <img src="../../assets/snowflake.svg" alt="snowflake">
+    Add a new post
+    <img src="../../assets/snowflake.svg" alt="snowflake">
+</h2>
 <form (ngSubmit)="onAddItem(postForm)" #postForm="ngForm">
     <div class="form-group">
         <label for="title">Post title:</label>
@@ -9,13 +13,14 @@
             class="form-control" 
             id="title" 
             placeholder="Enter title of post"
+            maxlength="100"
             ngModel
             />
         </div>
     <div class="form-group">
         <label for="postText">Text:</label>
         <textarea
-            id="description" 
+            id="postText" 
             type="postText" 
             class="form-control"
             name="postText" 

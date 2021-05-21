@@ -1,0 +1,10 @@
+<h2>
+    <img src="../../assets/snowflake.svg" alt="snowflake">
+    Checkout your new post
+    <img src="../../assets/snowflake.svg" alt="snowflake">
+</h2>
+<app-post [postElement]="post"></app-post>
+<div class="buttonsContainer">
+    <a (click)="checkoutAllPosts()"><button class="btn btn-info">Checkout all posts</button></a>
+    <a (click)="deleteLastPosts()"><button class="btn btn-danger">Remove this post</button></a>
+</div>

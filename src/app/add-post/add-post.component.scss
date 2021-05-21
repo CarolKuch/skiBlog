@@ -1,6 +1,11 @@
 h2 {
   text-align: center;
   margin-top: 4vh;
+
+  img {
+    width: 60px;
+  }
+
 }
 
 form {
@@ -8,8 +13,7 @@ form {
   margin: auto;
 
   textarea {
-    min-height: 30vh;
-
+    min-height: 28vh;
   }
 
   input,

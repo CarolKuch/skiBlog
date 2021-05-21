@@ -9,17 +9,15 @@ import axios from 'axios';
 export class PostsComponent implements OnInit {
   posts: {}[];
   constructor() {
-
   }
 
   ngOnInit(): void {
     axios
       .get('http://localhost:3000/posts')
       .then(response => {
-        this.posts = response.data;
+        this.posts = response.data.slice().reverse();
         console.log(this.posts);
       }
       );
   }
-
 }
