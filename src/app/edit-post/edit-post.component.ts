@@ -24,7 +24,6 @@ export class EditPostComponent implements OnInit {
       .then(response => {
         this.postTitle = response.data.title;
         this.postText = response.data.text;
-        console.log(this.postTitle + " " + this.postText + this.postId + " EDIT POST CMP TITLE AND TEXT");
       }
       );
   }
@@ -38,5 +37,9 @@ export class EditPostComponent implements OnInit {
       data: { "title": form.value.title, "text": form.value.postText }
     });
     this.router.navigate(['/checkout-summary', this.postId]);
+  }
+
+  onCancel = () => {
+    this.router.navigate(['/posts']);
   }
 }

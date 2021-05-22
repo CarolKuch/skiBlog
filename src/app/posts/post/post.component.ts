@@ -14,7 +14,9 @@ export class PostComponent implements OnInit {
   }
 
   confirmPostRemoval = () => {
-    var popup = document.getElementById("myPopup");
+    console.log(document.getElementsByClassName("myPopup"));
+    let popups = document.getElementsByClassName("myPopup");
+    let popup = Array.prototype.slice.call(popups, 0).reverse()[this.element.id - 1];
     popup.classList.toggle("show");
     return true;
   }
@@ -26,8 +28,6 @@ export class PostComponent implements OnInit {
         url: 'http://localhost:3000/posts/' + (this.element.id),
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log(this.element.id);
-      alert("Post is removed");
 
       if (this.router.url === '/posts') {
         window.location.reload()

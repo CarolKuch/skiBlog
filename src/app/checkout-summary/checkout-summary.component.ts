@@ -8,9 +8,10 @@ import axios from 'axios';
   styleUrls: ['./checkout-summary.component.scss']
 })
 export class CheckoutSummaryComponent implements OnInit {
-  post: {};
+  post: {} = { "title": "Title is loading...", "text": "Text is loading..." };
   id: number;
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+  }
 
   ngOnInit(): void {
 
