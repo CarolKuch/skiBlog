@@ -13,19 +13,21 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  confirmPostRemoval = () => {
-    console.log(document.getElementsByClassName("myPopup"));
+  confirmPostRemoval = (id: number) => {
     let popups = document.getElementsByClassName("myPopup");
-    let popup = Array.prototype.slice.call(popups, 0).reverse()[this.element.id - 1];
-    popup.classList.toggle("show");
+    Array.prototype.forEach.call(popups, (popup) => {
+      if (popup.classList.contains(id)) {
+        popup.classList.toggle("show");
+      }
+    })
     return true;
   }
 
-  deletePost = () => {
-    if (this.confirmPostRemoval()) {
+  deletePost = (id: number) => {
+    if (this.confirmPostRemoval(id)) {
       axios({
         method: 'DELETE',
-        url: 'http://localhost:3000/posts/' + (this.element.id),
+        url: 'http://localhost:3000/posts/' + (id),
         headers: { 'Content-Type': 'application/json' },
       });
 

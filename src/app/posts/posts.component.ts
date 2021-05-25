@@ -16,7 +16,6 @@ export class PostsComponent implements OnInit {
       .get('http://localhost:3000/posts')
       .then(response => {
         this.posts = response.data.slice().reverse();
-        console.log(this.posts);
       }
       );
   }

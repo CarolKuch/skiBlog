@@ -4,23 +4,16 @@
             {{element.title}}
             <div class="button-container">
                 <button class="btn btn-info" (click)="editPost()">Edit</button>
-                <div class="popup" (click)="confirmPostRemoval()">
+            <div class="popup" (click)="confirmPostRemoval([element.id])">
                     <button class="btn btn-danger">Delete</button>
-                    <span class="popuptext myPopup">
+                    <span class="popuptext myPopup {{element.id}}">
                         Remove the post?
                         <div class="popup-button-container">
-                            <button class="btn btn-info" (click)="deletePost()">YES</button>
+                            <button class="btn btn-info" (click)="deletePost([element.id])">YES</button>
                             <button class="btn btn-danger" style="margin-left: 15px">NO</button>
                         </div>
                     </span>
                 </div>
-                <!-- <div class="popup" (click)="confirmPostRemoval()">
-                    <button 
-                    class="btn btn-danger" 
-                    (click)="confirmPostRemoval()"                    
-                    >Delete</button>
-                    <span class="popuptext" id="myPopup">Popup text...</span>
-                </div>   -->
             </div>
         </h3>
         <small>Post id: {{element.id}}</small>
@@ -32,8 +25,5 @@
         {{element.text}}
     </p>
     <hr>
-    <!-- <div class="popup" (click)="confirmPostRemoval()">Click me!
-        <span class="popuptext" id="myPopup">Popup text...</span>
-    </div> -->
 </div>
 

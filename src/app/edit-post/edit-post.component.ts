@@ -18,7 +18,6 @@ export class EditPostComponent implements OnInit {
 
   ngOnInit(): void {
     this.postId = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.postId);
     axios
       .get('http://localhost:3000/posts/' + this.postId)
       .then(response => {
