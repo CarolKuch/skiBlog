@@ -12,7 +12,7 @@ This project is an online journal, which one or multiple people update daily, we
 * SCSS + Bootstrap.
 
 ## Development server
-Run `json-server --watch blog-app/db.json`. The database will start.
+Run `npm run db`. The database will start.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Contact
