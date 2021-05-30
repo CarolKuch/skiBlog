@@ -26,10 +26,10 @@ export class AddPostComponent implements OnInit {
 
     } else {
       if (form.value.title.length <= 2) {
-        console.log("Title must contain at least 3 characters")
+        alert("Title must contain at least 3 characters")
       }
       if (form.value.postText.length <= 9) {
-        console.log("Post text must contain at least 10 characters")
+        alert("Post text must contain at least 10 characters")
       }
     }
   }

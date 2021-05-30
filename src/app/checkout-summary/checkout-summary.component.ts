@@ -9,7 +9,7 @@ import axios from 'axios';
 })
 export class CheckoutSummaryComponent implements OnInit {
   post: {} = { "title": "", "text": "" };
-  id: number;
+  @Input('postElement') element;
   constructor(private route: ActivatedRoute, private router: Router) {
   }
 
@@ -20,8 +20,8 @@ export class CheckoutSummaryComponent implements OnInit {
         if (this.router.url === '/checkout-summary') {
           this.post = response.data.slice().reverse()[0];
         } else {
-          this.id = Number(this.route.snapshot.paramMap.get('id'));
-          this.post = response.data.slice()[this.id - 1];
+          this.element.id = Number(this.route.snapshot.paramMap.get('id'));
+          this.post = response.data.slice()[this.element.id - 1];
         }
       }
       );
