@@ -3,8 +3,8 @@
         <h3>
             {{element.title}}
             <div class="button-container">
-                <button class="btn btn-info" (click)="editPost()">Edit</button>
-            <div class="popup" (click)="confirmPostRemoval([element.id])">
+                <button class="btn btn-info" (click)="editPost([element.id])">Edit</button>
+                <div class="popup" (click)="confirmPostRemoval([element.id])">
                     <button class="btn btn-danger">Delete</button>
                     <span class="popuptext myPopup {{element.id}}">
                         Remove the post?
@@ -16,7 +16,6 @@
                 </div>
             </div>
         </h3>
-        <small>Post id: {{element.id}}</small>
     </div>  
     <p>
         <img src="../../assets/snowflake.svg" alt="snowflake">

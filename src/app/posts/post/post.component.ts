@@ -30,16 +30,21 @@ export class PostComponent implements OnInit {
         url: 'http://localhost:3000/posts/' + (id),
         headers: { 'Content-Type': 'application/json' },
       });
-
+      setTimeout(() => { }, 2000);
       if (this.router.url === '/posts') {
-        window.location.reload()
+        window.location.reload();
       } else {
         this.router.navigate(['/posts']);
       }
     }
   }
 
-  editPost = () => {
-    this.router.navigate(['/edit/' + this.element.id]);
+  editPost = (id) => {
+    if (this.element.id) {
+      this.router.navigate(['/edit/' + id], { state: { title: this.element.title, text: this.element.text, id: id } });
+    } else {
+      this.router.navigate(['/edit/'], { state: { title: this.element.title, text: this.element.text } });
+    }
+
   }
 }

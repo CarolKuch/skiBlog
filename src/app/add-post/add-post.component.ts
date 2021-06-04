@@ -10,26 +10,34 @@ import axios from 'axios';
 })
 export class AddPostComponent implements OnInit {
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   onAddItem(form: NgForm) {
     if (form.value.title.length > 2 && form.value.postText.length > 9) {
-      axios
-        .post('http://localhost:3000/posts', {
-          "title": form.value.title, "text": form.value.postText
-        });
-      this.router.navigate(['/checkout-summary']);
-
+      this.router.navigate(['/checkout-summary'], { state: { title: form.value.title, text: form.value.postText } })
     } else {
+      let popupTitle = document.getElementsByClassName("popupTitle")[0];
+      let popupText = document.getElementsByClassName("popupText")[0];
       if (form.value.title.length <= 2) {
-        alert("Title must contain at least 3 characters")
+
+        if (!popupTitle.classList.contains('show')) {
+          popupTitle.classList.add('show');
+        }
+      } else {
+        if (popupTitle.classList.contains('show')) {
+          popupTitle.classList.remove('show');
+        }
       }
       if (form.value.postText.length <= 9) {
-        alert("Post text must contain at least 10 characters")
+        if (!popupText.classList.contains('show')) {
+          popupText.classList.add('show');
+        }
+      } else {
+        if (popupText.classList.contains('show')) {
+          popupText.classList.remove('show');
+        }
       }
     }
   }

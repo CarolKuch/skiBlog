@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ɵɵtrustConstantResourceUrl } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
 
@@ -8,25 +8,44 @@ import axios from 'axios';
   styleUrls: ['./checkout-summary.component.scss']
 })
 export class CheckoutSummaryComponent implements OnInit {
-  post: {} = { "title": "", "text": "" };
-  @Input('postElement') element;
+  @Input('post') post = {
+    title: '',
+    text: '',
+    id: undefined
+  };
+
   constructor(private route: ActivatedRoute, private router: Router) {
+    this.post["title"] = this.router.getCurrentNavigation().extras.state.title;
+    this.post["text"] = this.router.getCurrentNavigation().extras.state.text;
+    this.post["id"] = this.router.getCurrentNavigation().extras.state.id;
   }
 
   ngOnInit(): void {
-    axios
-      .get('http://localhost:3000/posts')
-      .then(response => {
-        if (this.router.url === '/checkout-summary') {
-          this.post = response.data.slice().reverse()[0];
-        } else {
-          this.element.id = Number(this.route.snapshot.paramMap.get('id'));
-          this.post = response.data.slice()[this.element.id - 1];
-        }
-      }
-      );
   }
-  checkoutAllPosts = () => {
-    this.router.navigate(['/']);
+  sendPostToDataBase = () => {
+    if (this.post.id !== undefined) {
+      axios({
+        method: 'PUT',
+        url: 'http://localhost:3000/posts/' + this.post.id,
+        headers: { 'Content-Type': 'application/json' },
+        data: { "title": this.post.title, "text": this.post.text }
+      });
+      setTimeout(() => { }, 2000)
+      this.router.navigate(['/']);
+    }
+    else {
+      axios
+        .post('http://localhost:3000/posts', {
+          "title": this.post.title, "text": this.post.text
+        })
+        .then(
+          (res) => {
+            this.post.id = res.data.id
+          }
+        )
+      this.router.navigate(['/']);
+    }
+
+
   }
 }

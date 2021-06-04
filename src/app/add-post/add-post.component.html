@@ -7,6 +7,7 @@
 <form (ngSubmit)="onAddItem(postForm)" #postForm="ngForm">
     <div class="form-group">
         <label for="title">Post title:</label>
+
         <input
             name="title" 
             type="text" 
@@ -15,8 +16,11 @@
             placeholder="Enter title of post"
             maxlength="100"
             ngModel
-            />
-        </div>
+        />
+        <span class="popupTitle">
+            Title is too short! It must contain at least 3 characters.
+        </span>
+    </div>
     <div class="form-group">
         <label for="postText">Text:</label>
         <textarea
@@ -26,6 +30,9 @@
             name="postText" 
             placeholder="Enter your text..."
             ngModel></textarea>
+        <span class="popupText">
+            Title is too short! It must contain at least 3 characters.
+        </span>
     </div>
     <button type="submit" class="btn btn-info">ADD</button>
 </form>

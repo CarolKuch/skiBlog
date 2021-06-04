@@ -34,3 +34,13 @@ form {
     float: right;
   }
 }
+
+.popupTitle,
+.popupText {
+  color: red;
+  display: none;
+}
+
+.show {
+  display: inline;
+}

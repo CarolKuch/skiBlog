@@ -10,32 +10,37 @@ import { title } from 'process';
   styleUrls: ['./edit-post.component.scss']
 })
 export class EditPostComponent implements OnInit {
-
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
   public postId: string;
   public postText: string;
   public postTitle: string;
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.postTitle = this.router.getCurrentNavigation().extras.state.title;
+    this.postText = this.router.getCurrentNavigation().extras.state.text;
+    if (this.router.getCurrentNavigation().extras.state.id) {
+      this.postId = this.router.getCurrentNavigation().extras.state.id;
+    }
+  }
+
 
   ngOnInit(): void {
     this.postId = this.activatedRoute.snapshot.paramMap.get('id');
-    axios
-      .get('http://localhost:3000/posts/' + this.postId)
-      .then(response => {
-        this.postTitle = response.data.title;
-        this.postText = response.data.text;
-      }
-      );
+    if (this.postId) {
+      axios
+        .get('http://localhost:3000/posts/' + this.postId)
+        .then(response => {
+          this.postTitle = response.data.title;
+          this.postText = response.data.text;
+        }
+        );
+    }
   }
 
   onEditItem = (form: NgForm) => {
-
-    axios({
-      method: 'PUT',
-      url: 'http://localhost:3000/posts/' + this.postId,
-      headers: { 'Content-Type': 'application/json' },
-      data: { "title": form.value.title, "text": form.value.postText }
-    });
-    this.router.navigate(['/checkout-summary', this.postId]);
+    if (this.postId !== undefined) {
+      this.router.navigate(['/checkout-summary'], { state: { title: form.value.title, text: form.value.postText, id: this.postId } });
+    } else {
+      this.router.navigate(['/checkout-summary'], { state: { title: form.value.title, text: form.value.postText } });
+    }
   }
 
   onCancel = () => {

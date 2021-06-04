@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'checkout-summary/:id', component: CheckoutSummaryComponent },
   { path: 'checkout-summary', component: CheckoutSummaryComponent },
   { path: 'edit/:id', component: EditPostComponent },
+  { path: 'edit', component: EditPostComponent },
   { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 
