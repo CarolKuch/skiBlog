@@ -30,7 +30,7 @@ export class CheckoutSummaryComponent implements OnInit {
         headers: { 'Content-Type': 'application/json' },
         data: { "title": this.post.title, "text": this.post.text }
       });
-      setTimeout(() => { }, 2000)
+      setTimeout(() => { }, 8000);
       this.router.navigate(['/']);
     }
     else {
@@ -42,7 +42,8 @@ export class CheckoutSummaryComponent implements OnInit {
           (res) => {
             this.post.id = res.data.id
           }
-        )
+        );
+      setTimeout(() => { }, 8000);
       this.router.navigate(['/']);
     }
 

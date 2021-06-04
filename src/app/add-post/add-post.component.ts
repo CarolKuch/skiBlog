@@ -15,12 +15,12 @@ export class AddPostComponent implements OnInit {
   ngOnInit(): void { }
 
   onAddItem(form: NgForm) {
-    if (form.value.title.length > 2 && form.value.postText.length > 9) {
+    if (form.value.title.trim().length > 2 && form.value.postText.trim().length > 9) {
       this.router.navigate(['/checkout-summary'], { state: { title: form.value.title, text: form.value.postText } })
     } else {
       let popupTitle = document.getElementsByClassName("popupTitle")[0];
       let popupText = document.getElementsByClassName("popupText")[0];
-      if (form.value.title.length <= 2) {
+      if (form.value.title.trim().length <= 2) {
 
         if (!popupTitle.classList.contains('show')) {
           popupTitle.classList.add('show');
@@ -30,7 +30,7 @@ export class AddPostComponent implements OnInit {
           popupTitle.classList.remove('show');
         }
       }
-      if (form.value.postText.length <= 9) {
+      if (form.value.postText.trim().length <= 9) {
         if (!popupText.classList.contains('show')) {
           popupText.classList.add('show');
         }
