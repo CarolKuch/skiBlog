@@ -13,13 +13,21 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  confirmPostRemoval = (id: number) => {
+  confirmPostRemoval = (id?) => {
     let popups = document.getElementsByClassName("myPopup");
-    Array.prototype.forEach.call(popups, (popup) => {
-      if (popup.classList.contains(id)) {
+    if (id[0] !== undefined && id[0] !== null) {
+      console.log("DETE", id[0])
+      Array.prototype.forEach.call(popups, (popup) => {
+        if (popup.classList.contains(id[0])) {
+          popup.classList.toggle("show");
+        }
+      })
+    } else {
+      console.log("DETE")
+      Array.prototype.forEach.call(popups, (popup) => {
         popup.classList.toggle("show");
-      }
-    })
+      })
+    }
     return true;
   }
 
@@ -36,6 +44,8 @@ export class PostComponent implements OnInit {
       } else {
         this.router.navigate(['/posts']);
       }
+    } else {
+      this.router.navigate(['/posts'])
     }
   }
 
