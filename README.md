@@ -6,10 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This project is an online journal, which one or multiple people update daily, weekly, or monthly. Page store data in the database using API created by json-server.
 
 ## Stack
-* Angular,
-* Typescript,
-* json-server,
-* SCSS + Bootstrap.
+* Angular 6.14.9,	
+* Typescript 4.1.5,
+* json-server 0.16.3,
+* SCSS + Bootstrap 5.0.1.
 
 ## Development server
 Run `npm run db`. The database will start.

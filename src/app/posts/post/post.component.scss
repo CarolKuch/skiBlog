@@ -4,6 +4,13 @@
   padding: 1rem;
 }
 
+@media (max-width: 600px) {
+  .post {
+    margin: 5vh;
+  }
+
+}
+
 hr {
   color: #76797e;
 }
